@@ -134,6 +134,17 @@ button {
   buttons and links
 ===================*/
 
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
 .link {
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
@@ -177,7 +188,7 @@ button {
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  text-transform: lowercase;
+  text-transform: none;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -314,6 +325,7 @@ main {
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
+
 .profile-pic {
   width: 180px;
   height: 180px;
@@ -335,6 +347,56 @@ main {
 .profile-pic:hover {
   transform: scale(1.04);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--clr-primary);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--clr-primary);
+  border-radius: 50%;
+}
+
+.timeline-title {
+  font-weight: 700;
+  color: var(--clr-fg-alt);
+}
+
+.timeline-subtitle {
+  font-size: 0.9rem;
+  color: var(--clr-fg);
+  margin-top: 0.2rem;
+}
+
+.timeline-desc {
+  margin-top: 0.8rem;
+  max-width: 600px;
 }
 
 /* Responsive: stack on small screens */

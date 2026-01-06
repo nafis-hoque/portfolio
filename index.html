@@ -11,13 +11,16 @@
     ></script>
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
     <title>Nafis Hoque</title>
   </head>
 
   <body class="light" id="top">
     <header class="header center">
       <h3>
-        <a href="#" class="link">NH.</a>
+        <a href="#" class="link logo">
+        <img src="assets/images/icon.png" alt="Nafis Hoque logo" />
+        </a>
       </h3>
 
       <nav class="nav center">
@@ -60,12 +63,15 @@
             microservices, and cloud-native solutions. At Amdocs, I’ve worked on
             large-scale telecom platforms supporting AT&T’s broadband and fiber
             operations, helping reduce manual effort and improve system reliability.
+
+            My goal is to create AI-powered solutions that venture into unexplored domains, 
+            transforming ideas into meaningful, real-world applications.
           </p>
         </div>
 
         <div class="about__image">
           <img
-            src="images/PP_Pic.png"
+            src="assets/images/PP_Pic.png"
             alt="Nafis Hoque profile picture"
             loading="lazy"
             class="profile-pic"
@@ -97,9 +103,43 @@
         </div>
       </div>
 
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <h2 class="section__title">Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3 class="timeline-title">Software Developer — Amdocs</h3>
+            <p class="timeline-subtitle">Nov 2021 – Present</p>
+            <p class="timeline-desc">
+              Backend-focused developer supporting AT&T’s fiber and broadband platforms.
+              Built automation and microservices improving provisioning reliability,
+              reducing manual effort, and enabling scalable integrations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section" id="education">
+        <h2 class="section__title">Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3 class="timeline-title">Georgia State University</h3>
+            <p class="timeline-subtitle">B.S. in Computer Science · Aug 2017 – May 2021</p>
+            <p class="timeline-desc">
+              Magna Cum Laude · President’s List<br />
+              <strong>Coursework:</strong> Data Structures & Algorithms, Distributed Systems,
+              Cloud Computing, Database Management, Software Engineering
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
+      <section id="work-projects" class="section projects">
+        <h2 class="section__title">Work Projects</h2>
 
         <div class="projects__grid">
           <div class="project">
@@ -146,14 +186,53 @@
         </div>
       </section>
 
+      <!-- Personal Projects -->
+      <section id="personal-projects" class="section projects">
+        <h2 class="section__title">Personal Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Smart Home AI Automation Platform</h3>
+            <p class="project__description">
+              Built an AI-driven, cloud-based decision engine to optimize home climate
+              control across multiple smart thermostat platforms. The system balances
+              comfort, energy cost, and sustainability using real-time data.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Go</li>
+              <li class="project__stack-item">Java</li>
+              <li class="project__stack-item">Event-Driven Systems</li>
+              <li class="project__stack-item">Cloud APIs</li>
+              <li class="project__stack-item">AI Optimization</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Blockchain API Prototype</h3>
+            <p class="project__description">
+              Designed and documented RESTful APIs simulating blockchain-based value
+              transfer, focusing on secure, scalable transactions and system reliability.
+              Built integration tests and monitoring tools to validate performance.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Go</li>
+              <li class="project__stack-item">Java</li>
+              <li class="project__stack-item">REST APIs</li>
+              <li class="project__stack-item">Cloud</li>
+              <li class="project__stack-item">Monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- Skills -->
       <section class="section skills" id="skills">
         <h2 class="section__title">Skills</h2>
         <ul class="skills__list">
           <li class="skills__list-item btn btn--plain">Java</li>
+          <li class="skills__list-item btn btn--plain">JavaScript</li>
           <li class="skills__list-item btn btn--plain">Go</li>
           <li class="skills__list-item btn btn--plain">Python</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
           <li class="skills__list-item btn btn--plain">Spring Boot</li>
           <li class="skills__list-item btn btn--plain">Microservices</li>
           <li class="skills__list-item btn btn--plain">AWS</li>
