@@ -349,7 +349,8 @@ main {
 }
 
 .profile-pic.loaded {
-  /* No blur or scale needed */
+  filter: none;
+  transform: scale(1);
 }
 
 .timeline {
@@ -361,7 +362,7 @@ main {
 
 .timeline::before {
   content: "";
-  position: absolute;
+  position: relative;
   left: 8px;
   top: 0;
   bottom: 0;
@@ -373,6 +374,7 @@ main {
 .timeline-item {
   position: relative;
   margin-bottom: 3rem;
+  padding-left: 1rem;
 }
 
 .timeline-item::before {
