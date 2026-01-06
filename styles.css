@@ -135,8 +135,8 @@ button {
 ===================*/
 
 .logo img {
-  width: 16px;
-  height: 16px;
+  width: 36px;
+  height: 36px;
   border-radius: 4px;
   transition: transform 0.25s ease;
 }
@@ -373,7 +373,7 @@ main {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .timeline-item::before {
