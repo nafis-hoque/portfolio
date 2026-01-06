@@ -73,3 +73,19 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+const animateOnScroll = () => {
+  const elements = document.querySelectorAll('.animate-on-scroll')
+  
+  elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top
+    const elementBottom = element.getBoundingClientRect().bottom
+    const windowHeight = window.innerHeight
+    
+    if (elementTop < windowHeight - 100 && elementBottom > 0) {
+      element.classList.add('animate')
+    }
+  })
+}
+
+document.addEventListener('scroll', animateOnScroll)
+document.addEventListener('DOMContentLoaded', animateOnScroll)

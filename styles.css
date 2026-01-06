@@ -88,6 +88,32 @@ body {
   color: var(--clr-bg);
 }
 
+/*========
+  animations
+========*/
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 h1,
 h2,
 h3,
@@ -689,4 +715,9 @@ main {
   .timeline::before {
     left: 0px;
   }
+
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
 }
