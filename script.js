@@ -89,3 +89,37 @@ const animateOnScroll = () => {
 
 document.addEventListener('scroll', animateOnScroll)
 document.addEventListener('DOMContentLoaded', animateOnScroll)
+
+const roles = [
+  'A Backend Software Developer',
+  'An AI Innovator',
+  'A Tech Enthusiast',
+  'A Mechanical Keyboard Hobbyist',
+  'An Avid Traveler',
+  'A Graphic Designer'
+]
+
+let currentRoleIndex = 0
+const roleText = document.getElementById('role-text')
+
+const cycleRole = () => {
+  roleText.style.transition = 'transform 0.5s ease-in-out';
+  roleText.style.transform = 'translateY(-120%)'; 
+
+  setTimeout(() => {
+    roleText.style.transition = 'none';
+    roleText.style.transform = 'translateY(120%)';
+    
+    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+    roleText.textContent = roles[currentRoleIndex];
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        roleText.style.transition = 'transform 0.5s ease-in-out';
+        roleText.style.transform = 'translateY(0)';
+      }, 20);
+    });
+  }, 500);
+}
+
+setInterval(cycleRole, 3000)

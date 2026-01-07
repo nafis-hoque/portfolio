@@ -26,9 +26,6 @@
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item">
-            <a class="link link--nav" href="#about-me">About Me</a>
-          </li>
-          <li class="nav__list-item">
             <a class="link link--nav" href="#experience">Experience</a>
           </li>
           <li class="nav__list-item">
@@ -36,6 +33,9 @@
           </li>
           <li class="nav__list-item">
             <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#about-me">About Me</a>
           </li>
           <li class="nav__list-item">
             <a class="link link--nav" href="#contact">Contact</a>
@@ -60,7 +60,9 @@
       <!-- About -->
       <div class="about center">
         <h1>Hi, I’m <span class="about__name">Nafis Hoque.</span></h1>
-        <h2 class="about__role">A Backend Software Developer</h2>
+        <div class="role-container">
+          <h2 id="role-text" class="role-carousel">Backend Software Developer</h2>
+        </div>
         <div class="about__container">
         <div class="about__text">
           <p class="about__desc">
@@ -108,23 +110,46 @@
         </div>
       </div>
 
-      <section id="about-me" class="section animate-on-scroll">
-        <h2 class="section__title">About Me</h2>
-        <div class="about-card-container">
-          <div class="about-card__image">
-            <img src="assets/images/About_me.JPG" alt="Nafis About Me" />
-          </div>
-
-          <div class="about-card__content project">
-            <h3>Life Outside of Code</h3>
-            <p class="about-card__text">
-              I believe great engineering requires balance. When I'm not coding, I find my balance by hiking or traveling with my wife. 
-              As a dedicated tech enthusiast, I enjoy building custom PCs and researching the latest smartphones and accessories. 
-              I'm a mechanical keyboard hobbyist, appreciating the tactile intersection of hardware and software. 
-              Beyond technology, I find creative focus in graphic design, while prioritizing downtime for self-improvement
-              and mental health.
-            </p>
-          </div>
+      <!-- Overview -->
+      <section id="overview" class="section overview animate-on-scroll">
+        <h2 class="section__title">Overview</h2>
+        <div class="overview__container">
+          <a href="#experience" class="overview__link">
+            <div class="overview__item">
+              <i class="fas fa-graduation-cap overview__icon"></i>
+              <h3>Education</h3>
+              <p>B.S. in Computer Science from Georgia State University, Software Systems Engineering with focus on distributed systems and cloud computing.</p>
+            </div>
+          </a>
+          <a href="#experience" class="overview__link">
+            <div class="overview__item">
+              <i class="fas fa-briefcase overview__icon"></i>
+              <h3>Experience</h3>
+              <p>4+ years at Amdocs developing automation solutions for AT&T's telecom platforms, reducing manual effort by 40%.</p>
+            </div>
+          </a>
+          <a href="#contact" class="overview__link">
+            <div class="overview__item">
+              <i class="fas fa-flag overview__icon"></i>
+              <h3>US Citizen</h3>
+              <p>Authorized to work in the United States without sponsorship.</p>
+            </div>
+          </a>
+          <a href="#work-projects" class="overview__link">
+            <div class="overview__item">
+              <i class="fas fa-project-diagram overview__icon"></i>
+              <h3>Projects</h3>
+              <p>Built AI-powered smart home automation, network provisioning systems, and cloud migration solutions handling 100K+ assets.</p>
+            </div>
+          </a>
+          <a href="#skills" class="overview__link">
+            <div class="overview__item">
+              <i class="fas fa-code overview__icon"></i>
+              <h3>Backend Competence</h3>
+              <p>Specialized in building scalable microservices, REST APIs, and cloud-native solutions using Java, Go, and Spring Boot.</p>
+            </div>
+          </a>
+        </div>
       </section>
 
       <!-- Experience -->
@@ -133,21 +158,49 @@
 
         <div class="timeline">
           <div class="timeline-item">
-            <h3 class="timeline-title">Georgia State University</h3>
-            <p class="timeline-subtitle">B.S. in Computer Science · Aug 2017 – May 2021</p>
-            <p class="timeline-desc">
-              Magna Cum Laude · President’s List<br />
-              <strong>Coursework:</strong> Data Structures & Algorithms, Distributed Systems,
-              Cloud Computing, Database Management, Software Engineering
-            </p>
-          </div>
-          <div class="timeline-item">
             <h3 class="timeline-title">Software Developer — Amdocs</h3>
             <p class="timeline-subtitle">Nov 2021 – Present</p>
             <p class="timeline-desc">
-              Backend-focused developer supporting AT&T’s fiber and broadband platforms.
-              Built automation and microservices improving provisioning reliability,
-              reducing manual effort, and enabling scalable integrations.
+              At Amdocs, I've streamlined AT&T's broadband and Gigapower workflows, automated provisioning pipelines, and migrated 100K+ assets to a cloud CMDB, improving data accuracy and efficiency.
+            </p>
+            <div class="timeline-cards">
+              <div class="timeline-card">
+                Built Java Spring Boot microservices for AT&T Gigapower activations, automating IP allocation, routing updates, and device provisioning to cut manual effort by 40%.
+              </div>
+              <div class="timeline-card">
+                Designed highly available backend services with retries, structured logging, and resilient error handling to improve reliability and reduce incidents.
+              </div>
+              <div class="timeline-card">
+                Delivered high-volume REST APIs that connect network systems, middleware, and ServiceNow for seamless provisioning.
+              </div>
+              <div class="timeline-card">
+                Automated migration of 100K+ Granite network assets into ServiceNow CMDB using Java and JavaScript, improving configuration accuracy by 45%.
+              </div>
+              <div class="timeline-card">
+                Implemented ServiceNow backend logic (Business Rules, Script Includes, Flow Designer, Fix Scripts) to automate provisioning, validation, and reconciliation workflows.
+              </div>
+              <div class="timeline-card">
+                Partnered with QA, product, and platform teams to remove environment drift and add validation scripts, reducing release delays by about 30%.
+              </div>
+              <div class="timeline-card">
+                Resolved 200+ Jira tickets across distributed systems, APIs, and databases while maintaining roughly 95% on-time delivery.
+              </div>
+              <div class="timeline-card">
+                Collaborated with network engineers to turn operational needs into scalable backend features, improving end-to-end activation flow performance.
+              </div>
+            </div>
+
+          </div>
+          <div class="timeline-item">
+            <h3 class="timeline-title">Georgia State University</h3>
+            <p class="timeline-subtitle">B.S. in Computer Science · Aug 2017 – May 2021</p>
+            <div class="timeline-honors">
+              <span class="honor-badge">Magna Cum Laude</span>
+              <span class="honor-badge">President's List</span>
+            </div>
+            <p class="timeline-desc">
+              <strong>Key Coursework:</strong> Data Structures & Algorithms, Distributed Systems,
+              Cloud Computing, Database Management, Software Engineering
             </p>
           </div>
         </div>
@@ -261,50 +314,69 @@
       <section class="section skills animate-on-scroll" id="skills">
         <h2 class="section__title">Skills</h2>
         <div class="skill-category">
-          <h3>Languages</h3>
+          <h3>Backend Languages</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-java"></i> Java</li>
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-golang"></i> Go</li>
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-python"></i> Python</li>
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-c-plusplus"></i> C++</li>
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-html5"></i> HTML5</li>
-            <li class="skills__list-item btn btn--plain"><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-java"></i> Java <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-golang"></i> Go <span class="skill-experience">Basic</span></li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-python"></i> Python <span class="skill-experience">Basic</span></li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-c-plusplus"></i> C++ <span class="skill-experience">Basic</span></li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3>Frameworks & Competencies</h3>
+          <h3>Frontend Languages</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain">ServiceNow</li>
-            <li class="skills__list-item btn btn--plain">React</li>
-            <li class="skills__list-item btn btn--plain">Microservices</li>
-            <li class="skills__list-item btn btn--plain">REST APIs</li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-js-square"></i> JavaScript <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain">TypeScript <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-html5"></i> HTML <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain"><i class="fab fa-css3-alt"></i> CSS3 <span class="skill-experience">Intermediate</span></li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Technologies</h3>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Spring Boot <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain">Microservices <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain">REST APIs <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain">ServiceNow <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain">React <span class="skill-experience">Basic</span></li>
           </ul>
         </div>
         <div class="skill-category">
           <h3>DevOps & Tools</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain">Git</li>
-            <li class="skills__list-item btn btn--plain">GitLab CI/CD</li>
-            <li class="skills__list-item btn btn--plain">Docker</li>
-            <li class="skills__list-item btn btn--plain">Kubernetes</li>
-            <li class="skills__list-item btn btn--plain">Terraform</li>
+            <li class="skills__list-item btn btn--plain">Terraform <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">Docker <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">Kubernetes <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">Git <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">GitLab CI/CD <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">Jenkins <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">Dynatrace <span class="skill-experience">Intermediate</span></li>
           </ul>
         </div>
         <div class="skill-category">
           <h3>Databases</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain">Azure</li>
-            <li class="skills__list-item btn btn--plain">Postgres</li>
-            <li class="skills__list-item btn btn--plain">MongoDB</li>
-            <li class="skills__list-item btn btn--plain">MySQL</li>
-            <li class="skills__list-item btn btn--plain">ServiceNow CMDB</li>
+            <li class="skills__list-item btn btn--plain">ServiceNow CMDB <span class="skill-experience">Experienced</span></li>
+            <li class="skills__list-item btn btn--plain">PostgreSQL <span class="skill-experience">Basic</span></li>
+            <li class="skills__list-item btn btn--plain">MongoDB <span class="skill-experience">Basic</span></li>
+            <li class="skills__list-item btn btn--plain">MySQL <span class="skill-experience">Basic</span></li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Cloud & Infrastructure</h3>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Cloud Computing <span class="skill-experience">Intermediate</span></li>
+            <li class="skills__list-item btn btn--plain">Microsoft Azure <span class="skill-experience">Basic</span></li>
+            <li class="skills__list-item btn btn--plain">AWS Lambda <span class="skill-experience">Basic</span></li>
+            <li class="skills__list-item btn btn--plain">Azure Kubernetes Service <span class="skill-experience">Basic</span></li>
           </ul>
         </div>
         <div class="skill-category">
           <h3>Methodologies</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain">Agile (SAFe)</li>
+            <li class="skills__list-item btn btn--plain">Agile</li>
+            <li class="skills__list-item btn btn--plain">SAFe</li>
+            <li class="skills__list-item btn btn--plain">DevOps</li>
             <li class="skills__list-item btn btn--plain">DevSecOps</li>
             <li class="skills__list-item btn btn--plain">ITIL</li>
           </ul>
@@ -315,9 +387,27 @@
             <li class="skills__list-item btn btn--plain">AWS Solutions Architect – Associate</li>
             <li class="skills__list-item btn btn--plain">ServiceNow CSA</li>
             <li class="skills__list-item btn btn--plain">SAFe 5 Practitioner</li>
-            <li class="skills__list-item btn btn--plain">SAS Programming</li>
           </ul>
         </div>
+      </section>
+
+      <!-- About Me -->
+      <section id="about-me" class="section animate-on-scroll">
+        <h2 class="section__title">About Me</h2>
+        <div class="about-card-container">
+          <div class="about-card__image">
+            <img src="assets/images/About_me.jpg" alt="Nafis About Me" />
+          </div>
+          <div class="about-card__content project">
+            <h3>Life Outside of Code</h3>
+            <p class="about-card__text">
+              I believe great engineering requires balance. When I'm not coding, I find my balance by hiking or traveling with my wife. 
+              As a dedicated tech enthusiast, I enjoy building custom PCs and researching the latest smartphones and accessories. 
+              I'm a mechanical keyboard hobbyist, appreciating the tactile intersection of hardware and software. 
+              Beyond technology, I find creative focus in graphic design, while prioritizing downtime for self-improvement
+              and mental health.
+            </p>
+          </div>
       </section>
 
       <!-- Contact -->
